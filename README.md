@@ -1,24 +1,25 @@
-# README
+# micro-reddit
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Model planning
 
-Things you may want to cover:
+User
+  - username
+  - email
+  - password
 
-* Ruby version
+  - has_many posts
+  - has_many comments
 
-* System dependencies
+Post
+  - title
+  - text
+  - image
 
-* Configuration
+  - has_many comments
+  - has_one user
 
-* Database creation
+Comment
+  - text
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  - has_one user
+  - has_one post
